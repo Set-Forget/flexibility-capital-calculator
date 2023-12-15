@@ -28,7 +28,7 @@ const FormTwo = ({ formData, onBackClick, onButtonClick }) => {
     const URL = window.location.href
 
     const GAS_URL =
-      'https://script.google.com/macros/s/AKfycbxf-5bjZ48h47O9Rf2oPK41nAxFxsStO4XmNloJUTlTIZj2zEB7f_G833_11Pm6ZY-_/exec';
+      'https://script.google.com/macros/s/AKfycbyslqNK16qAyifMzfYt2C1hqZJaRqjherSCRx4G-JXpJga8ViPmtod6Zd72qZReD5I_/exec';
 
     // First GET request
     axios
