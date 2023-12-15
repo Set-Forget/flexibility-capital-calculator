@@ -25,7 +25,8 @@ const FormTwo = ({ formData, onBackClick, onButtonClick }) => {
     const companyName = document.getElementById('company-name').value;
     const phoneNumber = document.getElementById('phone-number').value;
     const emailAddress = document.getElementById('email-address').value;
-    const URL = window.location.href
+    const params = new URLSearchParams(window.location.search);
+    const URL = params.get('parentUrl');
 
     const GAS_URL =
       'https://script.google.com/macros/s/AKfycbyslqNK16qAyifMzfYt2C1hqZJaRqjherSCRx4G-JXpJga8ViPmtod6Zd72qZReD5I_/exec';
@@ -75,7 +76,6 @@ const FormTwo = ({ formData, onBackClick, onButtonClick }) => {
           encodeURIComponent(emailAddress) +
           '&url=' +
           encodeURIComponent(URL)
-
       )
       .then((response) => {
         console.log('Data received from second request:', response.data);
