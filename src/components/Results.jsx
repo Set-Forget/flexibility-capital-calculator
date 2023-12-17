@@ -33,7 +33,7 @@ const Results = ({ apiResponse, onBackClick }) => {
     apiResponse;
 
   return (
-    <div className="form-section bg-white p-6 rounded-lg shadow-lg flex flex-col justify-center">
+    <div className="form-section bg-white p-6 rounded-lg flex flex-col justify-center">
       <span className="font-medium text-xl text-zinc-800">Great news!</span>
       <br />
       <span className="font-medium text-xl text-zinc-800">
