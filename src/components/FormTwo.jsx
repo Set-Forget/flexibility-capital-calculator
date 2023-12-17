@@ -136,7 +136,7 @@ const FormTwo = ({ formData, onBackClick, onButtonClick }) => {
         ) : (
           <div
             id="second-part"
-            className="form-section bg-white p-6 rounded-lg shadow-lg flex flex-col justify-around"
+            className="form-section bg-white p-6 rounded-lg flex flex-col justify-around"
           >
             <button
               onClick={onButtonClick}
