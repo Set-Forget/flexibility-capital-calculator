@@ -127,7 +127,7 @@ const FormTwo = ({ formData, onBackClick, onButtonClick }) => {
         transition={{ duration: 0.5 }}
       >
         {loading ? (
-          <div className="form-section bg-white p-6 rounded-lg shadow-lg flex flex-col justify-center">
+          <div className="form-section bg-white p-6 rounded-lg flex flex-col justify-center">
             <Spinner className="absolute" />
             <h2 className="absolute self-center top-2/3 -translate-y-8">
               Getting Results...

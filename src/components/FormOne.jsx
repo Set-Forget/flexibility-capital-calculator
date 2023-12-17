@@ -14,7 +14,7 @@ const FormOne = ({ onButtonClick }) => {
     <>
       <div
         id="first-part"
-        className="form-section bg-white p-6 rounded-lg shadow-lg flex flex-col justify-around"
+        className="form-section bg-white p-6 rounded-lg flex flex-col justify-around"
       >
         <div className="bg-[#2aae79] text-white text-xl font-bold p-4">
           Realtime Funding Calculator
