@@ -9,7 +9,7 @@ const Results = ({ apiResponse, onBackClick }) => {
   if (apiResponse === 'loan_not_found') {
     // Handle failure case
     return (
-      <div className="form-section bg-white p-6 rounded-lg shadow-lg flex flex-col justify-center">
+      <div className="form-section bg-white p-6 rounded-lg flex flex-col justify-center">
         <span className="font-medium text-xl text-zinc-800">Bad news!</span>
         <br />
         <br />
