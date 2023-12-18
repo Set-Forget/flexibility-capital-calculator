@@ -29,7 +29,7 @@ const FormTwo = ({ formData, onBackClick, onButtonClick }) => {
     const URL = params.get('parentUrl');
 
     const GAS_URL =
-      'https://script.google.com/macros/s/AKfycbyeZeimVvQ5w_NExbkP67cMYrli6-fiIMvCW8E_6-SjiQ6KCh9tmzNeszve12BMs5hw/exec';
+      'https://script.google.com/macros/s/AKfycbzcuXVBQVGt4tpYU7dWef4cPQRvrIk-wzHn2MFncAPPTR0N2Q5Xauxz2Q-s_S3fLGuU/exec';
 
     // First GET request
     axios
