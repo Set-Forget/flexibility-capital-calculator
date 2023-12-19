@@ -11,6 +11,7 @@ const FormTwo = ({ formData, onBackClick, onButtonClick }) => {
     companyName: false,
     phoneNumber: false,
     emailAddress: false,
+    termsAgreement: false,
   });
   const [apiResponse, setApiResponse] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -92,13 +93,20 @@ const FormTwo = ({ formData, onBackClick, onButtonClick }) => {
     const companyName = document.getElementById('company-name').value;
     const phoneNumber = document.getElementById('phone-number').value;
     const emailAddress = document.getElementById('email-address').value;
+    const termsCheckbox = document.getElementById('terms-checkbox').checked;
+
+    // set phone and mail validations
+    const phoneRegex =
+      /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})?[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     const newValidationErrors = {
       moneyNeeded: !moneyNeeded,
       fullName: !fullName,
       companyName: !companyName,
-      phoneNumber: !phoneNumber,
-      emailAddress: !emailAddress,
+      phoneNumber: !phoneNumber.match(phoneRegex),
+      emailAddress: !emailAddress.match(emailRegex),
+      termsAgreement: !termsCheckbox,
     };
 
     setValidationErrors(newValidationErrors);
@@ -232,6 +240,36 @@ const FormTwo = ({ formData, onBackClick, onButtonClick }) => {
                 placeholder="Email"
                 required
               />
+            </div>
+
+            <div className="mb-4">
+              <label
+                className="block flex items-center text-gray-700 text-xs font-bold mb-2"
+                htmlFor="terms-checkbox"
+              >
+                <input
+                  type="checkbox"
+                  id="terms-checkbox"
+                  className={`mr-2 leading-tight rounded-sm ${getInputBorderClass(
+                    'termsAgreement'
+                  )}`}
+                  required
+                />
+                <div>
+                  I agree to receive contact via SMS texting for account and
+                  informational alerts from Shore Funding. Message and Data
+                  rates may apply. Recurring Messages. Text STOP to Optout.{' '}
+                  <a
+                    href="https://shorefundingsolutions.com/sms-policy/"
+                    className="text-blue-600 underline hover:text-blue-800"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    SMS Messaging Terms & Conditions and Policy
+                  </a>
+                  .
+                </div>
+              </label>
             </div>
 
             <button
